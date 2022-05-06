@@ -40,6 +40,10 @@ body {
 	background-color: var(--dark-blue);
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 a {
 	color: #fff;
 	text-decoration: none;
