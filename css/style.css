@@ -294,7 +294,7 @@ a {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(/img/museu-nft.jpeg);
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(img/museu-nft.jpeg);
 	border-radius: 12px;
 }
 
