@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-	--dark-blue: #0A0A1C;
+	--dark-blue: #0a0a1c;
 	--medium-blue: #20a4c3;
 	--soft-blue: #41c9a7;
 
@@ -31,7 +31,6 @@ html {
 body {
 	width: 100%;
 	height: fit-content;
-	background-color: var(--dark-blue);
 }
 
 body::-webkit-scrollbar {
@@ -44,22 +43,31 @@ a {
 }
 
 #page {
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	height: fit-content;
+	background-color: var(--dark-blue);
 }
 
 .wrapper {
-	top: 0;
-	left: 0;
 	width: 100%;
+	margin: 0 auto;
 	height: fit-content;
 	position: relative;
 
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+}
 
-	padding-bottom: 3%;
+.container {
+	width: 90%;
+	margin: 0 auto;
+	height: fit-content;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .navbar {
@@ -67,16 +75,17 @@ a {
 	width: 75%;
 	height: 100px;
 	display: flex;
+	justify-content: center;
 	position: fixed;
 
 	padding: 0 5%;
 	margin: 0 auto;
 
-	border-radius: 0px 0px 12px 12px;
-	background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
-	background-color: rgb(10, 10, 28, .5);
+	border-radius: 0 0 12px 12px;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
+	background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
+	background-color: rgb(10, 10, 28, .5);
 }
 
 .logo {
@@ -126,6 +135,27 @@ a {
 	transition: .3s all ease-in-out;
 }
 
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	position: relative;
+
+	padding: 3% 5%;
+	margin-top: 5%;
+	border-radius: 12px 12px 0 0;
+	background-color: var(--medium-blue);
+}
+
+.footer .logos {
+	width: 40%;
+}
+
+.footer .logos img {
+	width: 40%;
+}
+
 .hero-banner {
 	top: 0;
 	left: 0;
@@ -148,14 +178,27 @@ a {
 	font-size: 4rem;
 }
 
-.hero-text .title:nth-child(1) {
+.hero-text .title {
 	color: var(--monkey-one);
+	animation: titles 8s infinite;
 }
-.hero-text .title:nth-child(2) {
-	color: var(--monkey-two);
-}
-.hero-text .title:nth-child(3) {
-	color: var(--monkey-three);
+
+@keyframes titles {
+	0% {
+		color: var(--monkey-one);
+	}
+
+	33% {
+		color: var(--monkey-two);
+	}
+
+	66% {
+		color: var(--monkey-three);
+	}
+
+	100% {
+		color: var(--monkey-one);
+	}
 }
 
 .hero-text .button {
@@ -206,6 +249,46 @@ a {
 
 .hero-photo img {
 	height: 100%;
+}
+
+.hero-photo .slide {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../img/nfts/bored-ape-justin.jpg);
+	animation: slides 8s infinite;
+}
+
+@keyframes slides {
+	0% {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../img/nfts/bored-ape-justin.jpg);
+	}
+
+	33% {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../img/nfts/bored-ape-neymar-01.png);
+	}
+
+	66% {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../img/nfts/bored-ape-robot.jpg);
+	}
+
+	100% {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../img/nfts/bored-ape-justin.jpg);
+	}
 }
 
 .intro {
